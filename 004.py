@@ -18,11 +18,22 @@ def ispalindrome(n):
         return True
     else: return False
 
-def findmax():
-    for a in range(1000,99,-1):
-        for b in range(1000,99,-1): 
-            if ispalindrome(a*b):
-                print a*b, '=', a, '*', b
-                return (a, b, a*b)
+def findmax(lower, upper):
+    '''print the equation max = max_a * max_b
+       and return max '''
+    max = 0
+    max_a = 0
+    max_b = 0
+    for a in range(lower, upper):
+        for b in range(lower, upper):
+            s = a * b
+            if ispalindrome(s) and s > max:
+                max = s
+                max_a = a
+                max_b = b
+    print max_a*max_b, '=', max_a, '*', max_b
+    return max
 
-findmax()
+print findmax(100, 999)
+# 906609 = 913 * 993                                                                                                                                                                 
+# 906609
