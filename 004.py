@@ -9,6 +9,7 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 """
 
 def ispalindrome(n):
+    ''' return True if n is palindromic.'''
     n = str(n)
     r = ''
     for digit in n:
@@ -17,10 +18,11 @@ def ispalindrome(n):
         return True
     else: return False
 
-i = 999
-while not ispalindrome(i*999):
-    i -= 1
-    if i < 100:
-        print 'Oh no'
-        break
-print i*999
+def findmax():
+    for a in range(1000,99,-1):
+        for b in range(1000,99,-1): 
+            if ispalindrome(a*b):
+                print a*b, '=', a, '*', b
+                return (a, b, a*b)
+
+findmax()
