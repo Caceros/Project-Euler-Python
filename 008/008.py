@@ -26,15 +26,7 @@ number.
             05886116467109405077541002256983155200055935729725
             71636269561882670428252483600823257530420752963450
 
-            for numbers in line:
-        if len(numbers) >= 13:       # if str has more than 13 digits
-            for x in range (0 , len(numbers) - 12):   # loop through all the 'consecutive 13 digits block''
-                serial = numbers[x:x+13]
-                product = 1              # store the product
-                for i in range(0, 13):
-                    product *= int(serial[i])
-                    if product > max:
-                        max = product
+
 """
 # first remove all the \n and glue all the numbers into a very long str
 # then remove all the zeros
