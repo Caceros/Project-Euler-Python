@@ -20,4 +20,4 @@ while True:
     fib.append(NEWNUMBER)
     if NEWNUMBER % 2 == 0:
         even.append(NEWNUMBER)
-print sum(even)
+print(sum(even))

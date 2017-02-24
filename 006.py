@@ -18,5 +18,4 @@ hundred natural numbers and the square of the sum.
 import numpy as np
 num = range(1, 101)
 np_num = np.array(num)
-print sum(num)**2 - sum(np_num**2)
-    
+print(sum(num)**2 - sum(np_num**2))

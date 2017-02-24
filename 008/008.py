@@ -33,21 +33,23 @@ number.
 # then loop through the 13-digits-block to find the max product
 filename = 'n.txt'
 fd = open(filename)
-max = 0                              # store the max product
+m = 0                              # store the max product
 longstr = str()                      # store the very long str
 for line in fd:
-    line = line.strip()              # remove the spaces and \n     
+    line = line.strip()              # remove the spaces and \n
     for items in line:
-        longstr += items             
+        longstr += items
 l = len(longstr)
 line = line.split("0")
 for pieces in line:
     if len(pieces) >= 13:
-        for i in range(0, l - 13 + 1):       # loop throug l - 13 blocks, +1 cuz the last number in range() will not be included
-            block = longstr[i:i+13]
+        # loop throug l - 13 blocks, +1 cuz the last number in range() will not
+        # be included
+        for i in range(0, l - 13 + 1):
+            block = longstr[i:i + 13]
             product = 1                      # clear the previous value
             for digits in block:
                 product *= int(digits)
-            if product > max:
-               max = product
-print max
+            if product > m:
+                m = product
+print(m)

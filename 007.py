@@ -10,6 +10,7 @@ What is the 10001st prime number?
 
 import math
 
+
 def findprime(n_th):
     '''find the n th prime'''
     if n_th == 1:
@@ -27,4 +28,4 @@ def findprime(n_th):
             count += 1
     return n
 
-print findprime(10001)
+print(findprime(10001))
